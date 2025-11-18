@@ -1,6 +1,3 @@
-# Cài đặt Streamlit và các thư viện cần thiết
-!pip install -q streamlit pandas matplotlib seaborn scikit-learn
-%%writefile app.py
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,7 +5,7 @@ import seaborn as sns
 
 # --- 1. Cấu hình trang ---
 st.set_page_config(page_title="Highlands Pricing Strategy", layout="wide")
-st.title("☕ Highlands Coffee - Chiến lược Tối ưu hóa Giá")
+st.title("Highlands Coffee - Chiến lược Tối ưu hóa Giá")
 
 # --- 2. Load Data ---
 @st.cache_data
@@ -59,4 +56,5 @@ print("MẬT KHẨU CỦA BẠN LÀ:")
 !wget -q -O - ipv4.icanhazip.com
 
 # 2. Chạy Streamlit qua LocalTunnel
+
 !streamlit run app.py & npx localtunnel --port 8501
